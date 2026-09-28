@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -20,6 +21,9 @@ h1{font-size:clamp(42px,7vw,92px)}h2{font-size:clamp(34px,4.6vw,60px)}h3{font-si
 p.l{color:var(--ink2);max-width:56ch;margin-top:22px}
 .btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;background:var(--ink);color:var(--bg);border-radius:3px;font-weight:500;font-size:15px;border:0;transition:.25s}
 .btn:hover{background:var(--ac);color:#fff}.btn i,.ln i{font-style:normal;transition:transform .25s}.btn:hover i,.ln:hover i,.tile:hover i{transform:translateX(5px)}
+.btn-sm{min-height:38px;padding:0 16px;font-size:13px}
+.btn-outline{background:transparent;border:1px solid var(--st);color:var(--ink)}
+.btn-outline:hover{border-color:var(--ink);background:var(--sf)}
 .ln{display:inline-flex;gap:8px;min-height:48px;align-items:center;border-bottom:1px solid var(--ink);font-weight:500;font-size:15px}
 .row{display:flex;gap:28px;flex-wrap:wrap;align-items:center;margin-top:36px}
 /* header */
@@ -63,9 +67,17 @@ section{padding:clamp(72px,10vw,150px) 0}
 .sg{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:56px}
 .sg .tile:nth-child(1){grid-column:span 7;min-height:520px}.sg .tile:nth-child(2){grid-column:span 5}.sg .tile:nth-child(3){grid-column:span 4}.sg .tile:nth-child(4){grid-column:span 4}.sg .tile:nth-child(5){grid-column:span 4}.sg .tile:nth-child(6){grid-column:span 12;min-height:280px}
 @media(max-width:760px){.sg .tile{grid-column:span 12!important;min-height:320px!important}}
-.pr{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:56px}
-.pc .art{aspect-ratio:4/5}.pc .a{overflow:hidden}.pc .art{transition:transform 1s}.pc:hover .art{transform:scale(1.04)}
-.pc h3{margin-top:18px}.pc p{color:var(--ink2);font-size:15px;margin-top:6px}.pc small{display:block;margin-top:10px;color:var(--ink2);font-size:13px}
+.pr{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:40px}
+.pc{background:var(--sf);border:1px solid var(--st);border-radius:3px;display:flex;flex-direction:column;overflow:hidden;padding:0;transition:all .25s}
+.pc .art{aspect-ratio:16/10;min-height:180px}.pc .a{overflow:hidden}.pc .art{transition:transform 1s}.pc:hover .art{transform:scale(1.04)}
+.pc .c{padding:22px;display:flex;flex-direction:column;flex-grow:1}
+.pc h3{margin-top:10px;font-size:20px;font-weight:400}
+.pc p{color:var(--ink2);font-size:14px;margin-top:8px;line-height:1.5}
+.pc small{display:block;margin-top:12px;color:var(--ac);font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.pc .sp-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px;padding:12px 0;border-top:1px solid var(--st);border-bottom:1px solid var(--st);font-size:13px}
+.pc .sp-grid span{color:var(--ink2);display:block;font-size:11px;text-transform:uppercase}
+.pc .sp-grid b{font-weight:500;color:var(--ink)}
+.pc .actions{margin-top:auto;padding-top:16px;display:flex;gap:10px;align-items:center}
 .track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:48px;padding-bottom:16px}.track>div{flex:0 0 min(440px,80vw);aspect-ratio:3/4;scroll-snap-align:start}
 .dk{background:#20201E;color:#F2F1EC}.dk p.l{color:#B5B3AB}.dk .ey{color:#7fc4e3}
 .pf{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:56px;border-top:1px solid #4a4a46}
@@ -83,7 +95,7 @@ footer{background:#20201E;color:#B5B3AB;padding:80px 0 40px;font-size:15px}foote
 .fb{margin-top:56px;padding-top:24px;border-top:1px solid #3a3a37;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
 /* inner pages */
 .ph{padding-top:clamp(56px,8vw,110px);padding-bottom:40px}.ch{display:flex;gap:8px;flex-wrap:wrap;margin-top:36px}.ch button{min-height:44px;padding:0 18px;background:0;border:1px solid var(--st);border-radius:3px;font-size:14px}.ch button:hover{border-color:var(--ac)}.ch button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}.sk{position:absolute;left:8px;top:-60px;background:var(--ink);color:var(--bg);padding:12px 16px;z-index:99}.sk:focus{top:8px}header.hh:not(.s){color:#fff}header.hh:not(.s) nav.m button:hover,header.hh:not(.s) nav.m button.on{color:#fff;border-color:#fff}header.hh:not(.s) .btn{background:#fff;color:#20201E}.mega{color:var(--ink)}
-.tb{width:100%;border-collapse:collapse;margin-top:32px;font-size:15px}.tb th,.tb td{text-align:left;padding:14px 10px;border-bottom:1px solid var(--st);vertical-align:top}.tb th{width:34%;font-weight:500}.tb td{color:var(--ink2)}
+.tb{width:100%;border-collapse:collapse;margin-top:24px;font-size:15px}.tb th,.tb td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--st);vertical-align:top}.tb th{width:38%;font-weight:500;color:var(--ink2)}.tb td{color:var(--ink)}
 .fl{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}.fl input,.fl select,.fm input,.fm select,.fm textarea,.cl input{font:inherit;min-height:48px;padding:0 14px;background:var(--sf);color:var(--ink);border:1px solid var(--st);border-radius:3px;width:100%}
 .fl input{flex:2 1 260px;width:auto}.fl select{flex:1 1 160px;width:auto}
 .fm{display:grid;grid-template-columns:1fr 1fr;gap:16px}.fm .f{grid-column:span 2}.fm textarea{padding:12px 14px;min-height:130px}.fm label,.cl label{font-size:14px;color:var(--ink2);display:grid;gap:6px}
@@ -93,6 +105,19 @@ footer{background:#20201E;color:#B5B3AB;padding:80px 0 40px;font-size:15px}foote
 .v{display:none}.v.on{display:block}
 .rv{opacity:0;transform:translateY(18px);transition:.9s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+/* SPEC VIEWER MODAL / DRAWER */
+.drawer-backdrop{position:fixed;inset:0;background:rgba(20,20,18,.6);z-index:90;display:none;align-items:center;justify-content:flex-end}
+.drawer-backdrop.on{display:flex}
+.drawer{width:min(860px,100vw);height:100%;background:var(--bg);overflow-y:auto;padding:clamp(28px,5vw,56px);position:relative;box-shadow:-8px 0 32px rgba(0,0,0,.25)}
+.drawer-close{position:absolute;top:24px;right:24px;width:44px;height:44px;font-size:20px;border-radius:50%;background:var(--sf);border:1px solid var(--st);display:inline-flex;align-items:center;justify-content:center}
+.drawer-close:hover{background:var(--gr)}
+.metric-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:24px 0}
+.m-card{background:var(--sf);padding:14px;border:1px solid var(--st);border-radius:3px;text-align:center}
+.m-card span{display:block;font-size:11px;text-transform:uppercase;color:var(--ink2);letter-spacing:.05em}
+.m-card b{display:block;font-size:22px;font-weight:300;margin-top:4px}
+.badge{display:inline-block;padding:4px 8px;border-radius:2px;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;background:var(--gr);color:var(--ink2);margin-bottom:8px}
+.badge.ac{background:rgba(11,110,153,.1);color:var(--ac)}
 </style>
 </head>
 <body>
@@ -102,12 +127,12 @@ footer{background:#20201E;color:#B5B3AB;padding:80px 0 40px;font-size:15px}foote
 <a href="#home" class="lg" data-v="home">OPALUX</a>
 <nav class="m" aria-label="Primary">
 <div><button data-v="solutions">Solutions</button><div class="mega"><div class="w mg"><div>
-<a href="#solutions" data-v="solutions"><b>Safety &amp; Security</b><span>Protect people and property</span></a>
-<a href="#solutions" data-v="solutions"><b>Solar Control</b><span>Control heat, glare and fading</span></a>
-<a href="#solutions" data-v="solutions"><b>Privacy &amp; Decorative</b><span>Add privacy or a decorative finish</span></a>
-<a href="#solutions" data-v="solutions"><b>Manifestation (Mani-fest™)</b><span>Mark glass for visibility</span></a>
-<a href="#solutions" data-v="solutions"><b>Specialist Glass Effects</b><span>Create a special glass effect</span></a>
-<a href="#solutions" data-v="solutions"><b>Trade Supply</b><span>Supply a project</span></a></div><div class="art" data-a="2"></div></div></div></div>
+<a href="#solutions" data-v="solutions" data-c="0"><b>Safety &amp; Security</b><span>Protect people and property</span></a>
+<a href="#solutions" data-v="solutions" data-c="1"><b>Solar Control</b><span>Control heat, glare and fading</span></a>
+<a href="#solutions" data-v="solutions" data-c="2"><b>Privacy &amp; Decorative</b><span>Add privacy or a decorative finish</span></a>
+<a href="#solutions" data-v="solutions" data-c="3"><b>Manifestation (Mani-fest™)</b><span>Mark glass for visibility</span></a>
+<a href="#solutions" data-v="solutions" data-c="4"><b>Specialist Glass Effects</b><span>Create a special glass effect</span></a>
+<a href="#solutions" data-v="solutions" data-c="5"><b>Trade Supply</b><span>Supply a project</span></a></div><div class="art" data-a="2"></div></div></div></div>
 <div><button data-v="product">Products</button></div>
 <div><button data-v="home" data-s="projects">Projects</button></div>
 <div><button data-v="hub">Specifier Hub</button><div class="mega"><div class="w mg"><div>
@@ -120,7 +145,7 @@ footer{background:#20201E;color:#B5B3AB;padding:80px 0 40px;font-size:15px}foote
 <div class="rt"><button class="ic" aria-label="Search" data-v="hub">⌕</button><a href="#enquire" data-v="enquire" class="btn">Start a project <i>→</i></a><button class="ic burger" id="bg" aria-label="Open menu">☰</button></div>
 </div></header>
 <div id="mm" role="dialog" aria-label="Menu"><div class="t"><span class="lg">OPALUX</span><button class="ic" id="cx" aria-label="Close menu">✕</button></div>
-<details><summary>Solutions +</summary><a data-v="solutions" href="#solutions">Safety &amp; Security</a><a data-v="solutions" href="#solutions">Solar Control</a><a data-v="solutions" href="#solutions">Privacy &amp; Decorative</a><a data-v="solutions" href="#solutions">Mani-fest™</a><a data-v="solutions" href="#solutions">Specialist Glass Effects</a><a data-v="solutions" href="#solutions">Trade Supply</a></details>
+<details><summary>Solutions +</summary><a data-v="solutions" data-c="0" href="#solutions">Safety &amp; Security</a><a data-v="solutions" data-c="1" href="#solutions">Solar Control</a><a data-v="solutions" data-c="2" href="#solutions">Privacy &amp; Decorative</a><a data-v="solutions" data-c="3" href="#solutions">Mani-fest™</a><a data-v="solutions" data-c="4" href="#solutions">Specialist Glass Effects</a><a data-v="solutions" data-c="5" href="#solutions">Trade Supply</a></details>
 <a data-v="product" href="#product">Products</a><a data-v="home" data-s="projects" href="#home">Projects</a><a data-v="hub" href="#hub">Specifier Hub</a><a data-v="tools" href="#tools">Tools</a>
 <div class="b"><a class="btn" data-v="enquire" href="#enquire">Start a project <i>→</i></a><a class="ln" href="mailto:sales@stockfilms.co.uk">Contact Opalux</a></div></div>
 
@@ -131,23 +156,24 @@ footer{background:#20201E;color:#B5B3AB;padding:80px 0 40px;font-size:15px}foote
 <section id="statement"><div class="w split"><div class="rv"><span class="ey">Opalux</span><h2>Engineered performance. Architectural freedom.</h2><p class="l">Opalux window films help architects and project teams control light, heat, privacy and visual expression on existing glass, without changing the design intent.</p><div class="row"><a class="ln" href="#solutions" data-v="solutions">Discover Opalux <i>→</i></a></div></div><div class="art rv" data-a="3"></div></div></section>
 <section id="solutions" style="background:var(--gr)"><div class="w"><span class="ey">Solutions by problem</span><h2>Solutions for the built environment.</h2><p class="l">Start with the problem you need to solve. Each solution leads to the films that address it.</p>
 <div class="sg">
-<a class="tile rv" href="#solutions" data-v="solutions"><div class="art" data-a="4"></div><div class="cap"><h3>Safety &amp; Security</h3><p>Protect people and property by strengthening glass and helping hold shards in place.</p></div></a>
-<a class="tile rv" href="#solutions" data-v="solutions"><div class="art" data-a="6"></div><div class="cap"><h3>Solar Control</h3><p>Control heat, glare and fading.</p></div></a>
-<a class="tile rv" href="#solutions" data-v="solutions"><div class="art" data-a="7"></div><div class="cap"><h3>Privacy &amp; Decorative</h3><p>Add privacy or a finish.</p></div></a>
-<a class="tile rv" href="#solutions" data-v="solutions"><div class="art" data-a="8"></div><div class="cap"><h3>Manifestation</h3><p>Mani-fest™ for visible glass.</p></div></a>
-<a class="tile rv" href="#solutions" data-v="solutions"><div class="art" data-a="9"></div><div class="cap"><h3>Specialist Effects</h3><p>Special glass effects.</p></div></a>
+<a class="tile rv" href="#solutions" data-v="solutions" data-c="0"><div class="art" data-a="4"></div><div class="cap"><h3>Safety &amp; Security</h3><p>Protect people and property by strengthening glass and helping hold shards in place.</p></div></a>
+<a class="tile rv" href="#solutions" data-v="solutions" data-c="1"><div class="art" data-a="6"></div><div class="cap"><h3>Solar Control</h3><p>Control heat, glare and fading.</p></div></a>
+<a class="tile rv" href="#solutions" data-v="solutions" data-c="2"><div class="art" data-a="7"></div><div class="cap"><h3>Privacy &amp; Decorative</h3><p>Add privacy or a finish.</p></div></a>
+<a class="tile rv" href="#solutions" data-v="solutions" data-c="3"><div class="art" data-a="8"></div><div class="cap"><h3>Manifestation</h3><p>Mani-fest™ for visible glass.</p></div></a>
+<a class="tile rv" href="#solutions" data-v="solutions" data-c="4"><div class="art" data-a="9"></div><div class="cap"><h3>Specialist Effects</h3><p>Special glass effects.</p></div></a>
 <a class="tile rv" href="#enquire" data-v="enquire"><div class="art" data-a="10"></div><div class="cap"><h3>Trade Supply</h3><p>Supply a project, with Speedy Service and next-day delivery.</p></div></a>
 </div></div></section>
-<section id="products"><div class="w"><span class="ey">Products</span><h2>Explore Opalux products.</h2>
-<div class="pr">
-<a class="pc rv" href="#product" data-v="product"><div class="a"><div class="art" data-a="11"></div></div><h3>Opalux® SA-175CL-iSR</h3><p>175-micron clear safety film for interior application.</p><small>Application: interior glazing</small></a>
-<a class="pc rv" href="#product" data-v="product"><div class="a"><div class="art" data-a="12"></div></div><h3>Opalux® SA-175CL-eSR</h3><p>175-micron clear safety film for exterior application.</p><small>Application: exterior glazing</small></a>
-<a class="pc rv" href="#hub" data-v="hub"><div class="a"><div class="art" data-a="13"></div></div><h3>More products</h3><p>Solar control, privacy, decorative and specialist films. Product details to be supplied.</p><small>See the Specifier Hub</small></a>
+
+<!-- PRODUCTS PREVIEW ON HOME -->
+<section id="products"><div class="w"><div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px"><div><span class="ey">Products</span><h2>Explore Opalux products.</h2></div><a class="ln" href="#product" data-v="product">Browse full catalog (8 films) <i>→</i></a></div>
+<div class="pr" id="home-products-grid">
+  <!-- Dynamically loaded with top products -->
 </div></div></section>
+
 <section id="closer" style="background:var(--gr)"><div class="w"><span class="ey">Materials</span><h2>Look closer.</h2><p class="l">Performance begins at the surface. Explore the finishes and visual effects behind Opalux films.</p></div><div class="w"><div class="track"><div><div class="art" data-a="14"></div></div><div><div class="art" data-a="15"></div></div><div><div class="art" data-a="16"></div></div><div><div class="art" data-a="17"></div></div></div></div></section>
 <section class="dk" id="performance"><div class="w"><span class="ey">Performance</span><h2>Designed to perform.</h2><p class="l">Each film combines an architectural appearance with technical data supplied in its data sheet.</p>
-<div class="pf"><a href="#hub" data-v="hub">Solar control<span>View performance →</span></a><a href="#hub" data-v="hub">Glare management<span>View performance →</span></a><a href="#hub" data-v="hub">UV protection<span>View performance →</span></a><a href="#hub" data-v="hub">Privacy<span>View performance →</span></a><a href="#hub" data-v="hub">Light management<span>View performance →</span></a><a href="#product" data-v="product">Safety<span>View performance →</span></a></div>
-<p class="nt" style="color:#B5B3AB">Technical data to be supplied. Opalux 175-micron clear film is tested and certified to EN 12600 Class 1B1.</p></div></section>
+<div class="pf"><a href="#product" data-v="product" data-pcat="solar">Solar control<span>View performance →</span></a><a href="#product" data-v="product" data-pcat="solar">Glare management<span>View performance →</span></a><a href="#product" data-v="product" data-pcat="specialist">UV protection<span>View performance →</span></a><a href="#product" data-v="product" data-pcat="privacy">Privacy<span>View performance →</span></a><a href="#product" data-v="product" data-pcat="privacy">Light management<span>View performance →</span></a><a href="#product" data-v="product" data-pcat="safety">Safety<span>View performance →</span></a></div>
+<p class="nt" style="color:#B5B3AB">Opalux 175-micron clear safety film is certified to EN 12600 Class 1B1. Solar films tested to EN 410 and EN 673.</p></div></section>
 <section id="specifier"><div class="w"><span class="ey">Specifier Hub</span><h2>Everything you need to specify Opalux.</h2><p class="l">From product selection to project documentation, find the information a specification needs in one place.</p>
 <div class="rl"><a href="#hub" data-v="hub"><b>Data sheets</b><span>Performance and product information per film.</span><em>Open →</em></a><a href="#hub" data-v="hub"><b>Specification clauses</b><span>Copy a clause straight into your specification.</span><em>Open →</em></a><a href="#hub" data-v="hub"><b>Test reports and certificates</b><span>Supporting documentation for each film.</span><em>Open →</em></a><a href="#hub" data-v="hub"><b>Warranty and installation</b><span>Limited warranty terms and installation guidance.</span><em>Open →</em></a><div class="r"><b>CAD and BIM</b><span>Available on request.</span><em>To be supplied</em></div></div>
 <div class="row"><a class="btn" href="#hub" data-v="hub">Enter the Specifier Hub <i>→</i></a></div></div></section>
@@ -159,62 +185,684 @@ footer{background:#20201E;color:#B5B3AB;padding:80px 0 40px;font-size:15px}foote
 </div>
 
 <!-- SOLUTIONS -->
-<div class="v" id="v-solutions"><div class="w ph"><span class="ey" id="sey">Solution · Safety &amp; Security</span><h1 id="sh">Make glass safer.</h1><p class="l" id="sp">Designed to make glass safer, both by strengthening it against breakage and helping hold dangerous shards of shattered glass in situations where breakage does occur.</p><div class="ch" role="group" aria-label="Solutions"><button class="on" data-c="0">Safety &amp; Security</button><button data-c="1">Solar Control</button><button data-c="2">Privacy &amp; Decorative</button><button data-c="3">Mani-fest™</button><button data-c="4">Specialist Glass Effects</button><button data-c="5">Trade Supply</button></div><div class="row"><a class="btn" href="#enquire" data-v="enquire">Start a project <i>→</i></a><a class="ln" href="#product" data-v="product">See the safety film <i>→</i></a></div></div>
-<div class="w"><div class="art" style="aspect-ratio:21/9" data-a="4"></div></div>
-<section><div class="w split" style="align-items:start"><div><h2>Who this helps</h2><p class="l">[Content to be supplied by client]</p></div><div><h2>How film helps</h2><p class="l">The 175-micron clear film is tested and certified to EN 12600 Class 1B1. It helps comply with current government guidelines for bomb-blast protection.</p></div></div></section>
-<section style="background:var(--gr)"><div class="w"><h2>Frequently asked</h2><div class="rl"><div class="r"><b>Question 1</b><span>[Content to be supplied by client]</span><em></em></div><div class="r"><b>Question 2</b><span>[Content to be supplied by client]</span><em></em></div><div class="r"><b>Question 3</b><span>[Content to be supplied by client]</span><em></em></div></div></div></section></div>
+<div class="v" id="v-solutions"><div class="w ph"><span class="ey" id="sey">Solution · Safety &amp; Security</span><h1 id="sh">Make glass safer.</h1><p class="l" id="sp">Designed to make glass safer, both by strengthening it against breakage and helping hold dangerous shards of shattered glass in situations where breakage does occur.</p><div class="ch" role="group" aria-label="Solutions"><button class="on" data-c="0">Safety &amp; Security</button><button data-c="1">Solar Control</button><button data-c="2">Privacy &amp; Decorative</button><button data-c="3">Mani-fest™</button><button data-c="4">Specialist Glass Effects</button><button data-c="5">Trade Supply</button></div><div class="row"><a class="btn" href="#enquire" data-v="enquire">Start a project <i>→</i></a><a class="ln" href="#product" data-v="product" id="sol-action-btn">Browse suitable films <i>→</i></a></div></div>
+<div class="w"><div class="art" style="aspect-ratio:21/9" data-a="4" id="sol-art"></div></div>
+<section><div class="w split" style="align-items:start"><div><h2>Who this helps</h2><p class="l" id="sol-who">Architects, main contractors, building control officers, and facilities managers responsible for glazing impact safety compliance (Regulation 14), duty of care, and blast risk mitigation.</p></div><div><h2>How film helps</h2><p class="l" id="sol-how">The multi-layer optical film strengthens existing clear float or toughened glazing against premature failure, absorbing impact energy and containing fractured fragments safely in the perimeter frame.</p></div></div></section>
+<section style="background:var(--gr)"><div class="w"><h2>Frequently asked</h2><div class="rl"><div class="r"><b>Does film upgrade non-safety glass to UK Building Regulations?</b><span>Yes, Opalux safety films are tested to BS EN 12600 (Class 1B1 / 2B2) satisfying Workplace Regulation 14 and Approved Document K.</span><em></em></div><div class="r"><b>Can films be installed without replacing existing frames?</b><span>Yes, films are retrofitted directly to the existing glass in situ with minimal disruption to building occupants.</span><em></em></div><div class="r"><b>Is edge retention anchoring required?</b><span>For standard human impact, standard wet-edge trimming is sufficient. For blast mitigation, structural silicone or mechanical battening is recommended.</span><em></em></div></div></div></section></div>
 
-<!-- PRODUCT -->
-<div class="v" id="v-product"><div class="w ph"><span class="ey">Safety &amp; Security</span><h1>Opalux® SA-175CL-iSR / eSR</h1><p class="l">175-micron clear safety film. iSR is for interior application, eSR for exterior.</p><div class="row"><a class="btn" href="#hub" data-v="hub">Download data sheet <i>→</i></a><button class="ln" data-copy style="background:0;border-top:0;border-left:0;border-right:0">Copy clause</button><a class="ln" href="#enquire" data-v="enquire">Get a specification pack <i>→</i></a></div></div>
-<div class="w"><div class="art" style="aspect-ratio:21/9" data-a="11"></div></div>
-<section><div class="w"><h2>Technical data</h2><table class="tb"><tr><th>Product code</th><td>SA-175CL-iSR (interior) · SA-175CL-eSR (exterior)</td></tr><tr><th>Thickness</th><td>175 micron</td></tr><tr><th>Standard</th><td>EN 12600 Class 1B1 (Opalux 175-micron clear film)</td></tr><tr><th>Blast guidance</th><td>Helps comply with current government guidelines for bomb-blast protection</td></tr><tr><th>Warranty</th><td>Limited warranty with roll registration. Refer to the Opalux Product Warranty Form.</td></tr><tr><th>Features and benefits</th><td>Data to be supplied</td></tr></table>
-<p class="nt">Test results are produced from film applied to clear glass. Performance data is subject to change without prior notice. Specifiers should contact the company at the specification stage.</p></div></section></div>
+<!-- ======================================================== -->
+<!-- PRODUCT (INJECTED & UPGRADED WITH DEMO PRODUCTS & SPECS) -->
+<!-- ======================================================== -->
+<div class="v" id="v-product">
+  <div class="w ph">
+    <span class="ey">Product Range &amp; Specifications</span>
+    <h1>Engineered architectural films.</h1>
+    <p class="l">Comprehensive technical specifications for Opalux solar control, safety containment, privacy and specialist conservation films. Select any product to inspect verified optical data, glass compatibility, and copy specification clauses.</p>
+    
+    <div class="fl" style="margin-top:36px;align-items:center">
+      <input id="prod-q" type="search" placeholder="Search product code or name (e.g. SA-175, Silver 20, Frost)..." aria-label="Search products">
+      <select id="prod-filter-cat" aria-label="Category Filter">
+        <option value="all">All Categories (8 Films)</option>
+        <option value="safety">Safety &amp; Security</option>
+        <option value="solar">Solar Control</option>
+        <option value="privacy">Privacy &amp; Decorative</option>
+        <option value="specialist">Specialist &amp; Manifestation</option>
+      </select>
+      <select id="prod-filter-loc" aria-label="Application Location">
+        <option value="all">Interior &amp; Exterior</option>
+        <option value="Interior">Interior Application</option>
+        <option value="Exterior">Exterior Application</option>
+      </select>
+    </div>
+
+    <div class="ch" id="prod-chips" style="margin-top:20px" role="group" aria-label="Quick Category Filter">
+      <button class="on" data-cat="all">All</button>
+      <button data-cat="safety">Safety &amp; Security</button>
+      <button data-cat="solar">Solar Control</button>
+      <button data-cat="privacy">Privacy &amp; Frosted</button>
+      <button data-cat="specialist">Specialist</button>
+    </div>
+  </div>
+
+  <!-- Product Catalog Grid -->
+  <div class="w" style="padding-bottom:100px">
+    <div class="pr" id="prod-grid">
+      <!-- Dynamic products injected by JS -->
+    </div>
+  </div>
+</div>
 
 <!-- HUB -->
 <div class="v" id="v-hub"><div class="w ph"><span class="ey">Specifier Hub</span><h1>Specify with confidence.</h1><p class="l">Technical information and project resources for architects, specifiers and contractors. The filters and search below preview the final experience.</p>
 <div class="fl"><input id="q" type="search" placeholder="What are you looking for?" aria-label="Search documents"><select aria-label="Category"><option>All categories</option><option>Safety &amp; Security</option><option>Solar Control</option><option>Privacy &amp; Decorative</option></select><select aria-label="Location"><option>Interior / Exterior</option><option>Interior</option><option>Exterior</option></select></div>
-<div class="rl" id="dl"><a href="#hub" data-t="sa-175cl-isr data sheet"><b>SA-175CL-iSR</b><span>Interior safety film data sheet</span><em>Download PDF</em></a><a href="#hub" data-t="sa-175cl-esr data sheet"><b>SA-175CL-eSR</b><span>Exterior safety film data sheet</span><em>Download PDF</em></a><a href="#hub" data-t="specification clause"><b>Specification clause</b><span>Ready-to-copy clause. To be supplied.</span><em>Copy clause</em></a><a href="#hub" data-t="warranty form"><b>Opalux Product Warranty Form</b><span>Full terms of the limited warranty</span><em>Download PDF</em></a><a href="#hub" data-t="test certificate en 12600"><b>EN 12600 test certificate</b><span>Class 1B1, 175-micron clear film</span><em>Download PDF</em></a><a href="#hub" data-t="cad bim"><b>CAD and BIM</b><span>Available on request</span><em>Request</em></a></div>
+<div class="rl" id="dl"><a href="#hub" data-t="sa-175cl-isr data sheet"><b>SA-175CL-iSR</b><span>Interior safety film data sheet</span><em>Download PDF</em></a><a href="#hub" data-t="sa-175cl-esr data sheet"><b>SA-175CL-eSR</b><span>Exterior safety film data sheet</span><em>Download PDF</em></a><a href="#hub" data-t="solar silver 20 data sheet"><b>Solar Silver 20</b><span>High performance reflective solar control data sheet</span><em>Download PDF</em></a><a href="#hub" data-t="neutral 35 data sheet"><b>Neutral 35-iSR</b><span>Subtle architectural solar film data sheet</span><em>Download PDF</em></a><a href="#hub" data-t="opal frost data sheet"><b>Opal Frost (OP-FROST)</b><span>Acid-etch translucent privacy film data sheet</span><em>Download PDF</em></a><a href="#hub" data-t="specification clause"><b>Specification clauses</b><span>CAWS ready-to-copy clause library</span><em>Copy clause</em></a><a href="#hub" data-t="warranty form"><b>Opalux Product Warranty Form</b><span>Full terms of the limited 10-year warranty</span><em>Download PDF</em></a><a href="#hub" data-t="test certificate en 12600"><b>EN 12600 test certificate</b><span>Class 1B1, 175-micron clear film</span><em>Download PDF</em></a><a href="#hub" data-t="cad bim"><b>CAD and BIM</b><span>Available on request</span><em>Request</em></a></div>
 <p class="nt">Test results are produced from film applied to clear glass. Performance data is subject to change without prior notice. Specifiers should contact the company at the specification stage.</p></div></div>
 
 <!-- TOOLS -->
-<div class="v" id="v-tools"><div class="w ph"><span class="ey">Digital tools</span><h1>Glass area calculator.</h1><p class="l">Enter the size of one pane and how many there are to estimate the glass area.</p>
+<div class="v" id="v-tools"><div class="w ph"><span class="ey">Digital tools</span><h1>Glass area calculator.</h1><p class="l">Enter the size of one pane and how many there are to estimate the glass area and master roll yields.</p>
 <div class="cl"><label>Width (m)<input id="cw" type="number" min="0" step="0.01" value="2"></label><label>Height (m)<input id="ch" type="number" min="0" step="0.01" value="1.5"></label><label>Number of panes<input id="cn" type="number" min="1" step="1" value="4"></label></div>
-<div class="row"><button class="btn" id="calc">Calculate <i>→</i></button></div><div class="rs" id="rs" aria-live="polite">12.00 m²</div><p class="nt">Estimate only. Ask us for a quote.</p></div>
-<section style="background:var(--gr)"><div class="w"><h2>More tools</h2><div class="tools"><a href="#enquire" data-v="enquire"><b>Product Finder</b><span>Coming in the build phase.</span></a><a href="#hub" data-v="hub"><b>Film Comparison</b><span>Coming in the build phase.</span></a><a href="#enquire" data-v="enquire"><b>Project Enquiry Builder</b><span>Try the enquiry form.</span></a></div></div></section></div>
+<div class="row"><button class="btn" id="calc">Calculate <i>→</i></button></div><div class="rs" id="rs" aria-live="polite">12.00 m²</div><p class="nt">Estimate only (yields approx. 1 master roll of 1,524 mm x 30.5m with cutting allowance). Ask us for a trade quotation.</p></div>
+<section style="background:var(--gr)"><div class="w"><h2>More tools</h2><div class="tools"><a href="#product" data-v="product"><b>Product Finder</b><span>Explore all 8 architectural films with live filters.</span></a><a href="#product" data-v="product"><b>Film Comparison &amp; Specs</b><span>Click any film to view full optical metrics side-by-side.</span></a><a href="#enquire" data-v="enquire"><b>Project Enquiry Builder</b><span>Describe your project in five short steps.</span></a></div></div></section></div>
 
 <!-- ENQUIRE -->
 <div class="v" id="v-enquire"><div class="w ph"><span class="ey">Project enquiry</span><h1>Have a project in mind?</h1><p class="l">Talk to the Opalux team about your glazing requirements.</p>
-<form class="fm" id="ef" style="margin-top:40px;max-width:900px"><label>Name<input required></label><label>Company<input></label><label>Email<input type="email" required></label><label>Phone<input type="tel"></label><label>Project name and location<input></label><label>Sector<select><option>Architect / Interior designer</option><option>Facilities manager</option><option>Technical specifier</option><option>Contractor / installer</option></select></label><label class="f">What problem needs solving?<textarea></textarea></label><label class="f" style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" required style="width:22px;min-height:22px;margin-top:3px"> I agree to Stockfilms contacting me about this enquiry, as set out in the Privacy Policy.</label><div class="f"><button class="btn" type="submit">Start a conversation <i>→</i></button><p class="nt" id="ok" role="status"></p></div></form></div></div>
+<form class="fm" id="ef" style="margin-top:40px;max-width:900px"><label>Name<input required></label><label>Company<input></label><label>Email<input type="email" required></label><label>Phone<input type="tel"></label><label>Project name and location<input></label><label>Sector<select><option>Architect / Interior designer</option><option>Facilities manager</option><option>Technical specifier</option><option>Contractor / installer</option></select></label><label class="f">What problem needs solving?<textarea placeholder="Describe the glass type, problem (e.g. overheating, impact safety, privacy), and approximate area..."></textarea></label><label class="f" style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" required style="width:22px;min-height:22px;margin-top:3px"> I agree to Stockfilms contacting me about this enquiry, as set out in the Privacy Policy.</label><div class="f"><button class="btn" type="submit">Start a conversation <i>→</i></button><p class="nt" id="ok" role="status"></p></div></form></div></div>
 </main>
 
+<!-- ======================================================== -->
+<!-- PRODUCT SPECIFICATION DRAWER / VIEWER MODAL             -->
+<!-- ======================================================== -->
+<div class="drawer-backdrop" id="spec-drawer" role="dialog" aria-modal="true" aria-label="Product Technical Specifications">
+  <div class="drawer">
+    <button class="drawer-close" id="drawer-close-btn" aria-label="Close specification sheet">✕</button>
+    <div id="drawer-content">
+      <!-- Dynamic Technical Specs Populated Here -->
+    </div>
+  </div>
+</div>
+
 <footer><div class="w"><div class="fg"><div><div class="lg" style="color:#F2F1EC">OPALUX</div><p style="margin-top:16px">Stockfilms<br>PO Box 11, Barnet, Herts, EN5 4DE, UK<br>T 020 8441 0449 · F 020 8441 0443<br><a href="mailto:sales@stockfilms.co.uk">sales@stockfilms.co.uk</a></p></div>
-<div><h4>Solutions</h4><a href="#solutions" data-v="solutions">Safety &amp; Security</a><a href="#solutions" data-v="solutions">Solar Control</a><a href="#solutions" data-v="solutions">Privacy &amp; Decorative</a><a href="#solutions" data-v="solutions">Mani-fest™</a><a href="#solutions" data-v="solutions">Specialist Glass Effects</a></div>
+<div><h4>Solutions</h4><a href="#solutions" data-v="solutions" data-c="0">Safety &amp; Security</a><a href="#solutions" data-v="solutions" data-c="1">Solar Control</a><a href="#solutions" data-v="solutions" data-c="2">Privacy &amp; Decorative</a><a href="#solutions" data-v="solutions" data-c="3">Mani-fest™</a><a href="#solutions" data-v="solutions" data-c="4">Specialist Glass Effects</a></div>
 <div><h4>Specifiers</h4><a href="#hub" data-v="hub">Specifier Hub</a><a href="#hub" data-v="hub">Data sheets</a><a href="#product" data-v="product">Products</a><a href="#tools" data-v="tools">Tools</a></div>
 <div><h4>Site</h4><a href="#enquire" data-v="enquire">Start a project</a><a href="#home">Terms &amp; Conditions</a><a href="#home">Privacy Policy</a><a href="#home">Cookie Policy</a><a href="#home">Site Map</a></div></div>
-<div class="fb"><span>© 2026 Stockfilms. All rights reserved.</span><span>Concept design · placeholder imagery to be replaced with client photography</span></div></div></footer>
+<div class="fb"><span>© 2026 Stockfilms. All rights reserved.</span><span>Architectural Window Films · High Performance Glazing Retrofit</span></div></div></footer>
 
 <script>
 /* HANDOFF: replace all SVG art (data-replace="client photography"), sample projects, product data, CAD/BIM, brand colour #0B6E99 */
 var $=function(s,c){return(c||document).querySelector(s)},$$=function(s,c){return[].slice.call((c||document).querySelectorAll(s))};
+
+// SVG ART GENERATOR
 var P=[["#3b4a55","#7d929e","#c9d3d8","#eceff0"],["#2a2d30","#5a6a73","#a9b7bd","#e7e4dc"],["#4a4038","#8d7b6c","#cfc3b6","#f1ece4"],["#20323d","#3f6478","#93b3c4","#dbe7ed"]];
-function art(n){var p=P[n%4],r=n*9301+49297,R=function(){r=(r*9301+49297)%233280;return r/233280},cols=4+n%4,rows=3+n%3,w=1000/cols,h=750/rows,s='<svg viewBox="0 0 1000 750" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1000" height="750" fill="'+p[3]+'"/>';
-for(var i=0;i<cols;i++)for(var j=0;j<rows;j++){s+='<rect x="'+(i*w+5)+'" y="'+(j*h+5)+'" width="'+(w-10)+'" height="'+(h-10)+'" fill="'+p[Math.floor(R()*3)]+'" opacity="'+(.55+R()*.45).toFixed(2)+'"/>'}
-var x=R()*500;s+='<polygon points="'+x+',0 '+(x+260)+',0 '+(x+560)+',750 '+(x+300)+',750" fill="#fff" opacity=".14"/><polygon points="'+(x+330)+',0 '+(x+380)+',0 '+(x+680)+',750 '+(x+630)+',750" fill="#fff" opacity=".1"/><rect x="0" y="'+(700-R()*80)+'" width="1000" height="90" fill="#000" opacity=".16"/></svg>';return s}
-$$("[data-a]").forEach(function(e){e.innerHTML=art(+e.dataset.a);e.setAttribute("data-replace","client photography")});
-var hd=$("#hd");function sc(){var h=$("#v-home").classList.contains("on");hd.classList.toggle("hh",h);hd.classList.toggle("s",scrollY>40||!h)}addEventListener("scroll",sc,{passive:true});
-function show(v,s){$$(".v").forEach(function(e){e.classList.toggle("on",e.id==="v-"+v)});$$("nav.m button").forEach(function(b){b.classList.toggle("on",b.dataset.v===v&&!b.dataset.s)});$("#mm").classList.remove("o");
-var t=s&&$("#"+s);if(t)t.scrollIntoView();else scrollTo(0,0);sc();io()}
+function art(n){
+  var p=P[n%4],r=n*9301+49297,R=function(){r=(r*9301+49297)%233280;return r/233280},cols=4+n%4,rows=3+n%3,w=1000/cols,h=750/rows,s='<svg viewBox="0 0 1000 750" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1000" height="750" fill="'+p[3]+'"/>';
+  for(var i=0;i<cols;i++)for(var j=0;j<rows;j++){s+='<rect x="'+(i*w+5)+'" y="'+(j*h+5)+'" width="'+(w-10)+'" height="'+(h-10)+'" fill="'+p[Math.floor(R()*3)]+'" opacity="'+(.55+R()*.45).toFixed(2)+'"/>'}
+  var x=R()*500;s+='<polygon points="'+x+',0 '+(x+260)+',0 '+(x+560)+',750 '+(x+300)+',750" fill="#fff" opacity=".14"/><polygon points="'+(x+330)+',0 '+(x+380)+',0 '+(x+680)+',750 '+(x+630)+',750" fill="#fff" opacity=".1"/><rect x="0" y="'+(700-R()*80)+'" width="1000" height="90" fill="#000" opacity=".16"/></svg>';
+  return s;
+}
+function renderSvgArt(){
+  $$("[data-a]").forEach(function(e){e.innerHTML=art(+e.dataset.a);e.setAttribute("data-replace","client photography")});
+}
+renderSvgArt();
+
+// ==========================================
+// OPALUX PRODUCT DATABASE (8 DEMO PRODUCTS)
+// ==========================================
+var PRODUCTS = [
+  {
+    id: "sa-175-isr",
+    code: "SA-175CL-iSR",
+    name: "Opalux® 175µ Clear Safety Film (Interior)",
+    category: "safety",
+    loc: "Interior",
+    thickness: "175 Micron (7 mil)",
+    tser: "19%",
+    vlt: "88%",
+    uvBlock: "99%",
+    glareRed: "4%",
+    standard: "EN 12600 Class 1B1 / Bomb-Blast",
+    warranty: "10 Years Limited",
+    summary: "175-micron heavy duty optically clear fragment retention film for interior application.",
+    desc: "Engineered to strengthen glass and hold hazardous shards in place during human impact or bomb blast overpressure events. Completely clear and optically undetectable once cured.",
+    optical: {
+      "Total Solar Energy Rejected (TSER)": "19%",
+      "Visible Light Transmittance (VLT)": "88%",
+      "Visible Light Reflectance (VLR)": "10%",
+      "Solar Absorption": "14%",
+      "UV Filtration (<380nm)": ">99%",
+      "Shading Coefficient (SC)": "0.93",
+      "Solar Heat Gain Coefficient (SHGC)": "0.81"
+    },
+    physical: {
+      "Film Thickness": "175 microns (0.175 mm)",
+      "Tensile Strength at Break": "2,050 kg/cm²",
+      "Break Strength": "36 kg/cm",
+      "Elongation at Break": "135%",
+      "Adhesive Type": "High-impact pressure-sensitive acrylic",
+      "Hardcoat Finish": "Scratch-resistant iSR"
+    },
+    clause: "L40/220: Safety film applied to glass internally. Film: Opalux SA-175CL-iSR (175 micron). Standard: Certified to EN 12600 Class 1B1. Supplier: Stockfilms Ltd (020 8441 0449). Application by certified installer."
+  },
+  {
+    id: "sa-175-esr",
+    code: "SA-175CL-eSR",
+    name: "Opalux® 175µ Clear Safety Film (Exterior)",
+    category: "safety",
+    loc: "Exterior",
+    thickness: "175 Micron (7 mil)",
+    tser: "21%",
+    vlt: "86%",
+    uvBlock: "99%",
+    glareRed: "6%",
+    standard: "EN 12600 Class 1B1 Weatherable",
+    warranty: "5 Years Exterior Vertical",
+    summary: "Exterior-grade 175-micron safety film formulated with weather-resistant hardcoat.",
+    desc: "Specially formulated for application to the exterior face of facade glazing where internal access is restricted or where external glass spalling mitigation is needed.",
+    optical: {
+      "Total Solar Energy Rejected (TSER)": "21%",
+      "Visible Light Transmittance (VLT)": "86%",
+      "Visible Light Reflectance (VLR)": "11%",
+      "Solar Absorption": "17%",
+      "UV Filtration (<380nm)": ">99%",
+      "Shading Coefficient (SC)": "0.91",
+      "Solar Heat Gain Coefficient (SHGC)": "0.79"
+    },
+    physical: {
+      "Film Thickness": "175 microns (0.175 mm)",
+      "Tensile Strength": "1,980 kg/cm²",
+      "Break Strength": "35 kg/cm",
+      "Elongation at Break": "125%",
+      "Adhesive Type": "Weatherable cross-linked acrylic",
+      "Hardcoat Finish": "Exterior durable eSR hydrophobic"
+    },
+    clause: "L40/220: External safety film applied to exterior glazing. Film: Opalux SA-175CL-eSR (175 micron exterior). Impact standard: EN 12600 Class 1B1. Supplier: Stockfilms Ltd."
+  },
+  {
+    id: "sa-100-isr",
+    code: "SA-100CL-iSR",
+    name: "Opalux® 100µ Clear Safety Film",
+    category: "safety",
+    loc: "Interior",
+    thickness: "100 Micron (4 mil)",
+    tser: "17%",
+    vlt: "89%",
+    uvBlock: "98%",
+    glareRed: "3%",
+    standard: "EN 12600 Class 2B2 / Reg 14",
+    warranty: "10 Years Limited",
+    summary: "Standard 100-micron clear safety film for low-level critical impact zones.",
+    desc: "Cost-effective life-safety upgrade to bring non-compliant glass into compliance with Workplace Health, Safety and Welfare Regulation 14 and Approved Document K.",
+    optical: {
+      "Total Solar Energy Rejected (TSER)": "17%",
+      "Visible Light Transmittance (VLT)": "89%",
+      "Visible Light Reflectance (VLR)": "9%",
+      "Solar Absorption": "11%",
+      "UV Filtration (<380nm)": ">98%",
+      "Shading Coefficient (SC)": "0.95",
+      "Solar Heat Gain Coefficient (SHGC)": "0.83"
+    },
+    physical: {
+      "Film Thickness": "100 microns (0.100 mm)",
+      "Tensile Strength": "1,950 kg/cm²",
+      "Break Strength": "20 kg/cm",
+      "Elongation at Break": "120%",
+      "Adhesive Type": "Clear pressure-sensitive acrylic",
+      "Hardcoat Finish": "Scratch-resistant iSR"
+    },
+    clause: "L40/220: Human impact safety film. Film: Opalux SA-100CL-iSR (100 micron). Standard: Certified to EN 12600 Class 2B2 / Workplace Reg 14. Supplier: Stockfilms Ltd."
+  },
+  {
+    id: "solar-silver-20",
+    code: "S-20-iSR",
+    name: "Opalux® Solar Silver 20 Reflective",
+    category: "solar",
+    loc: "Interior",
+    thickness: "50 Micron (2 mil)",
+    tser: "78%",
+    vlt: "18%",
+    uvBlock: "99%",
+    glareRed: "81%",
+    standard: "EN 13501-1 Class B-s1, d0 Fire",
+    warranty: "10 Years Limited",
+    summary: "High performance reflective solar control film providing maximum heat rejection.",
+    desc: "Vaporised aluminium coating rejects up to 78% of total solar energy and reduces screen glare by 81%, delivering dramatic cooling energy savings and daytime one-way privacy.",
+    optical: {
+      "Total Solar Energy Rejected (TSER)": "78%",
+      "Visible Light Transmittance (VLT)": "18%",
+      "Visible Light Reflectance (VLR)": "58%",
+      "Solar Absorption": "34%",
+      "UV Filtration (<380nm)": ">99%",
+      "Shading Coefficient (SC)": "0.26",
+      "Solar Heat Gain Coefficient (SHGC)": "0.22"
+    },
+    physical: {
+      "Film Thickness": "50 microns (0.050 mm)",
+      "Metallisation": "Vacuum aluminium sputter",
+      "Emissivity": "0.68",
+      "Adhesive Type": "Optically clear permanent acrylic",
+      "Hardcoat Finish": "Scratch-resistant iSR"
+    },
+    clause: "L40/220: Solar control window film. Film: Opalux Solar Silver 20 (S-20-iSR). TSER: 78%. Glare reduction: 81%. Fire reaction: EN 13501-1 Class B-s1, d0. Supplier: Stockfilms Ltd."
+  },
+  {
+    id: "neutral-35",
+    code: "NE-35-iSR",
+    name: "Opalux® Neutral 35 Architectural",
+    category: "solar",
+    loc: "Interior",
+    thickness: "50 Micron (2 mil)",
+    tser: "57%",
+    vlt: "36%",
+    uvBlock: "99%",
+    glareRed: "60%",
+    standard: "EN 410 / EN 673 Optical Standard",
+    warranty: "10 Years Limited",
+    summary: "Subtle neutral grey-bronze solar film with low external reflection.",
+    desc: "Specially designed for architecturally sensitive buildings where high reflectivity is prohibited. Delivers 57% solar heat reduction while preserving natural exterior glass views.",
+    optical: {
+      "Total Solar Energy Rejected (TSER)": "57%",
+      "Visible Light Transmittance (VLT)": "36%",
+      "Visible Light Reflectance (VLR)": "22%",
+      "Solar Absorption": "46%",
+      "UV Filtration (<380nm)": ">99%",
+      "Shading Coefficient (SC)": "0.50",
+      "Solar Heat Gain Coefficient (SHGC)": "0.43"
+    },
+    physical: {
+      "Film Thickness": "50 microns (0.050 mm)",
+      "Coating": "Dual dielectric non-corrosive alloy",
+      "Adhesive Type": "Pressure-sensitive acrylic",
+      "Hardcoat Finish": "Optical grade scratch-resistant iSR"
+    },
+    clause: "L40/220: Low-reflectance solar film. Film: Opalux Neutral 35 (NE-35-iSR). TSER: 57%. Visible light transmission: 36%. Supplier: Stockfilms Ltd."
+  },
+  {
+    id: "opal-frost",
+    code: "OP-FROST",
+    name: "Opalux® Opal Frost Translucent Privacy",
+    category: "privacy",
+    loc: "Interior",
+    thickness: "75 Micron (3 mil)",
+    tser: "28%",
+    vlt: "68%",
+    uvBlock: "95%",
+    glareRed: "40%",
+    standard: "BS 476 Part 7 Class 1 Fire",
+    warranty: "10 Years Limited",
+    summary: "Acid-etched translucent privacy film providing 24-hour bidirectional privacy.",
+    desc: "Replicates costly sandblasted or acid-etched glass on existing partitions. Obscures vision while transmitting 68% diffused natural daylight, preventing spaces from feeling closed off.",
+    optical: {
+      "Total Solar Energy Rejected (TSER)": "28%",
+      "Visible Light Transmittance (VLT)": "68%",
+      "Visible Light Reflectance (VLR)": "19%",
+      "Solar Absorption": "22%",
+      "UV Filtration (<380nm)": ">95%",
+      "Shading Coefficient (SC)": "0.83",
+      "Solar Heat Gain Coefficient (SHGC)": "0.72"
+    },
+    physical: {
+      "Film Thickness": "75 microns (calendered polymeric)",
+      "Surface Finish": "Uniform matte acid-etched translucence",
+      "Adhesive Type": "Removable to semi-permanent acrylic",
+      "Liner": "Siliconised polyester"
+    },
+    clause: "N10/240: Decorative privacy film. Film: Opalux Opal Frost (OP-FROST). Finish: Acid-etch matte translucent. Fire: Class 1. Supplier: Stockfilms Ltd."
+  },
+  {
+    id: "manifest-dots",
+    code: "MF-DOTS-50",
+    name: "Opalux® Mani-fest™ 50mm Dots",
+    category: "specialist",
+    loc: "Interior",
+    thickness: "75 Micron (3 mil)",
+    tser: "24%",
+    vlt: "70%",
+    uvBlock: "92%",
+    glareRed: "15%",
+    standard: "Building Regs Part K / BS 8300",
+    warranty: "10 Years Limited",
+    summary: "Pre-spaced 50mm frosted visual dots at 100mm pitch for glass manifestation.",
+    desc: "Supplied pre-spaced on application tape to ensure fast, laser-accurate compliance with Approved Document K & BS 8300 height requirements (850-1000mm and 1400-1600mm).",
+    optical: {
+      "Total Solar Energy Rejected (TSER)": "N/A (Patterned)",
+      "Visible Light Transmittance (VLT)": "70% (Through dot)",
+      "Visible Light Reflectance (VLR)": "18%",
+      "Solar Absorption": "N/A",
+      "UV Filtration (<380nm)": ">90%",
+      "Shading Coefficient (SC)": "N/A",
+      "Solar Heat Gain Coefficient (SHGC)": "N/A"
+    },
+    physical: {
+      "Pattern": "50mm circular dots at 100mm horizontal pitch",
+      "Material": "Opalux frosted translucent film",
+      "Carrier": "Low-tack clear transfer tape",
+      "Fire Rating": "Class 1"
+    },
+    clause: "N10/240: Glazing manifestation. Film: Opalux Mani-fest™ MF-DOTS-50 (50mm dots at 100mm centres). Locations: Bands at 900mm and 1500mm above finished floor level. Standard: Approved Document K & BS 8300. Supplier: Stockfilms Ltd."
+  },
+  {
+    id: "museum-uv99",
+    code: "UV-99CL-iSR",
+    name: "Opalux® Museum Conservation UV Clear",
+    category: "specialist",
+    loc: "Interior",
+    thickness: "50 Micron (2 mil)",
+    tser: "20%",
+    vlt: "88%",
+    uvBlock: "99.9%",
+    glareRed: "4%",
+    standard: "Museum Conservation Grade (CRI > 98)",
+    warranty: "10 Years Limited",
+    summary: "Museum-grade clear film filtering 99.9% of UV radiation up to 400nm.",
+    desc: "Essential for historic archives, galleries, luxury retail and private art collections. Stops the primary catalyst of fabric and artwork fading without altering natural colour rendering.",
+    optical: {
+      "Total Solar Energy Rejected (TSER)": "20%",
+      "Visible Light Transmittance (VLT)": "88%",
+      "Visible Light Reflectance (VLR)": "10%",
+      "Solar Absorption": "15%",
+      "UV Filtration (<400nm)": "99.9%",
+      "Color Rendering Index (CRI)": ">98",
+      "Shading Coefficient (SC)": "0.92"
+    },
+    physical: {
+      "Film Thickness": "50 microns (0.050 mm)",
+      "UV Chemistry": "Triple-stage benzotriazole inhibitors",
+      "Optical Clarity": "Haze < 0.6%",
+      "Adhesive Type": "Purified clear pressure-sensitive acrylic",
+      "Hardcoat Finish": "Scratch-resistant iSR"
+    },
+    clause: "L40/220: UV filter film. Film: Opalux Museum UV-99CL-iSR. UV filtration: 99.9% up to 400nm. VLT: 88%. Color Rendering Index: >98. Supplier: Stockfilms Ltd."
+  }
+];
+
+// HEADER & SCROLL BEHAVIOUR
+var hd=$("#hd");
+function sc(){
+  var h=$("#v-home").classList.contains("on");
+  hd.classList.toggle("hh",h);
+  hd.classList.toggle("s",scrollY>40||!h);
+}
+addEventListener("scroll",sc,{passive:true});
+
+// VIEW ROUTING
+function show(v,s){
+  $$(".v").forEach(function(e){e.classList.toggle("on",e.id==="v-"+v)});
+  $$("nav.m button").forEach(function(b){b.classList.toggle("on",b.dataset.v===v&&!b.dataset.s)});
+  $("#mm").classList.remove("o");
+  var t=s&&$("#"+s);
+  if(t)t.scrollIntoView();else scrollTo(0,0);
+  sc();
+  io();
+}
 function cm(){$$("nav.m>div.op").forEach(function(d){d.classList.remove("op")})}
-document.addEventListener("click",function(e){var a=e.target.closest("[data-v]"),d=e.target.closest("nav.m>div");if(a&&d&&a.parentNode===d&&$(".mega",d)&&matchMedia("(hover:none)").matches&&!d.classList.contains("op")){e.preventDefault();cm();d.classList.add("op");return}if(!d)cm();if(a){e.preventDefault();cm();show(a.dataset.v,a.dataset.s);document.activeElement&&document.activeElement.blur()}});
-var SL=[["Safety & Security","Make glass safer.","Designed to make glass safer, both by strengthening it against breakage and helping hold dangerous shards of shattered glass in situations where breakage does occur."],["Solar Control","Control heat and glare.","[Content to be supplied by client]"],["Privacy & Decorative","Add privacy or a finish.","[Content to be supplied by client]"],["Manifestation (Mani-fest™)","Make glass visible.","[Content to be supplied by client]"],["Specialist Glass Effects","Create a special effect.","[Content to be supplied by client]"],["Trade Supply","Supply a project.","Speedy Service and next-day delivery. [Further content to be supplied by client]"]];
-addEventListener("keydown",function(e){if(e.key==="Escape")cm()});
-$$(".ch button").forEach(function(b){b.onclick=function(){var d=SL[+b.dataset.c];$$(".ch button").forEach(function(x){x.classList.toggle("on",x===b)});$("#sey").textContent="Solution · "+d[0];$("#sh").textContent=d[1];$("#sp").textContent=d[2]}});
-$("#bg").onclick=function(){$("#mm").classList.add("o")};$("#cx").onclick=function(){$("#mm").classList.remove("o")};
-var ob;function io(){if(!("IntersectionObserver"in window)){$$(".rv").forEach(function(e){e.classList.add("in")});return}ob=ob||new IntersectionObserver(function(l){l.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");ob.unobserve(x.target)}})},{threshold:.12});$$(".rv:not(.in)").forEach(function(e){ob.observe(e)})}io();sc();
-$("#q").oninput=function(){var v=this.value.toLowerCase();$$("#dl a").forEach(function(a){a.style.display=(a.dataset.t+a.textContent).toLowerCase().indexOf(v)>-1?"":"none"})};
-function calc(){var v=$("#cw").value*$("#ch").value*$("#cn").value;$("#rs").textContent=(isFinite(v)?v:0).toFixed(2)+" m²"}$("#calc").onclick=calc;
-$("[data-copy]").onclick=function(){var b=this,t="Opalux SA-175CL clear safety film: [specification clause to be supplied by client].";try{navigator.clipboard.writeText(t)}catch(e){}var o=b.textContent;b.textContent="Copied";setTimeout(function(){b.textContent=o},1600)};
-$("#ef").onsubmit=function(e){e.preventDefault();$("#ok").textContent="Thank you. This is a design preview, so no enquiry was sent. Please email sales@stockfilms.co.uk."};
+
+document.addEventListener("click",function(e){
+  var a=e.target.closest("[data-v]"),d=e.target.closest("nav.m>div");
+  if(a&&d&&a.parentNode===d&&$(".mega",d)&&matchMedia("(hover:none)").matches&&!d.classList.contains("op")){
+    e.preventDefault();cm();d.classList.add("op");return;
+  }
+  if(!d)cm();
+  if(a){
+    e.preventDefault();cm();
+    var view=a.dataset.v;
+    var solIdx=a.dataset.c;
+    var prodCat=a.dataset.pcat;
+    var prodId=a.dataset.prod;
+    
+    show(view, a.dataset.s);
+
+    if(view==="solutions" && solIdx!==undefined){
+      switchSolution(+solIdx);
+    }
+    if(view==="product" && prodCat){
+      setProductCategory(prodCat);
+    }
+    if(prodId){
+      openProductSpecs(prodId);
+    }
+    if(document.activeElement) document.activeElement.blur();
+  }
+});
+
+// SOLUTIONS LOGIC
+var SL=[
+  ["Safety & Security","Make glass safer.","Designed to make glass safer, both by strengthening it against breakage and helping hold dangerous shards of shattered glass in situations where breakage does occur."],
+  ["Solar Control","Control heat and glare.","Advanced metallised and ceramic films designed to reduce excessive solar heat build-up, banish screen glare, and lower cooling energy expenditure."],
+  ["Privacy & Decorative","Add privacy or a finish.","Translucent acid-etched and architectural frost films providing 24-hour visual confidentiality while maintaining soft daylight diffusion."],
+  ["Manifestation (Mani-fest™)","Make glass visible.","Pre-spaced dots, squares and bands engineered to satisfy UK Building Regulations Approved Document K and BS 8300 visual glass marking mandates."],
+  ["Specialist Glass Effects","Create a special glass effect.","Museum-grade 99.9% UV filtration to protect artworks from fading, plus exterior sacrificial anti-graffiti surface protection."],
+  ["Trade Supply","Supply a project.","Speedy Service and next-day courier delivery for full master rolls and precision cut-to-size lengths across the UK."]
+];
+
+function switchSolution(idx){
+  var d=SL[idx];
+  $$(".ch button").forEach(function(x,i){x.classList.toggle("on",i===idx)});
+  $("#sey").textContent="Solution · "+d[0];
+  $("#sh").textContent=d[1];
+  $("#sp").textContent=d[2];
+  var artBox=$("#sol-art");
+  if(artBox){
+    var artId=4+idx;
+    artBox.dataset.a=artId;
+    artBox.innerHTML=art(artId);
+  }
+}
+
+$$(".ch button").forEach(function(b){
+  b.onclick=function(){
+    switchSolution(+b.dataset.c);
+  };
+});
+
+// MOBILE MENU
+$("#bg").onclick=function(){$("#mm").classList.add("o")};
+$("#cx").onclick=function(){$("#mm").classList.remove("o")};
+
+// INTERSECTION OBSERVER FOR FADE-IN ANIMATIONS
+var ob;
+function io(){
+  if(!("IntersectionObserver"in window)){$$(".rv").forEach(function(e){e.classList.add("in")});return}
+  ob=ob||new IntersectionObserver(function(l){l.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");ob.unobserve(x.target)}})},{threshold:.12});
+  $$(".rv:not(.in)").forEach(function(e){ob.observe(e)});
+}
+io();sc();
+
+// ==========================================
+// RENDER PRODUCTS (CATALOG & HOME PREVIEWS)
+// ==========================================
+function renderProductCard(p, idx){
+  return [
+    '<div class="pc rv" data-cat="' + p.category + '" data-loc="' + p.loc + '">',
+      '<div class="a"><div class="art" data-a="' + (11 + idx) + '"></div></div>',
+      '<div class="c">',
+        '<div><span class="badge ac">' + p.code + '</span> <span class="badge">' + p.loc + '</span></div>',
+        '<h3>' + p.name + '</h3>',
+        '<p>' + p.summary + '</p>',
+        '<div class="sp-grid">',
+          '<div><span>TSER Heat Block</span><b>' + p.tser + '</b></div>',
+          '<div><span>VLT Light</span><b>' + p.vlt + '</b></div>',
+          '<div><span>UV Rejection</span><b>' + p.uvBlock + '</b></div>',
+          '<div><span>Standard</span><b>' + (p.standard.split('/')[0]) + '</b></div>',
+        '</div>',
+        '<div class="actions">',
+          '<button class="btn btn-sm" onclick="openProductSpecs(\'' + p.id + '\')">View Technical Specs <i>→</i></button>',
+          '<button class="btn btn-sm btn-outline" onclick="copyClauseDirect(\'' + p.id + '\', this)" title="Copy NBS specification clause">Copy NBS</button>',
+        '</div>',
+      '</div>',
+    '</div>'
+  ].join('');
+}
+
+function renderCatalog(){
+  var cat = $("#prod-filter-cat").value;
+  var loc = $("#prod-filter-loc").value;
+  var q = $("#prod-q").value.toLowerCase().trim();
+  var grid = $("#prod-grid");
+  if(!grid) return;
+
+  var filtered = PRODUCTS.filter(function(p){
+    var matchCat = (cat === "all" || p.category === cat);
+    var matchLoc = (loc === "all" || p.loc === loc);
+    var matchQ = true;
+    if(q){
+      var haystack = (p.code + " " + p.name + " " + p.summary + " " + p.desc + " " + p.standard).toLowerCase();
+      matchQ = haystack.indexOf(q) > -1;
+    }
+    return matchCat && matchLoc && matchQ;
+  });
+
+  if(filtered.length === 0){
+    grid.innerHTML = '<div style="grid-column:1/-1;padding:60px 0;text-align:center;color:var(--ink2)">No products match your selected criteria. Try adjusting your filters.</div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(function(p, i){ return renderProductCard(p, i); }).join('');
+  renderSvgArt();
+  io();
+}
+
+function setProductCategory(catKey){
+  $("#prod-filter-cat").value = catKey;
+  $$("#prod-chips button").forEach(function(b){
+    b.classList.toggle("on", b.dataset.cat === catKey);
+  });
+  renderCatalog();
+}
+
+// Home featured products (first 3)
+function renderHomeProducts(){
+  var hGrid = $("#home-products-grid");
+  if(!hGrid) return;
+  hGrid.innerHTML = PRODUCTS.slice(0, 3).map(function(p, i){
+    return renderProductCard(p, i);
+  }).join('');
+  renderSvgArt();
+}
+renderHomeProducts();
+renderCatalog();
+
+// Product Filters Event Listeners
+$("#prod-filter-cat").onchange = function(){
+  var c = this.value;
+  $$("#prod-chips button").forEach(function(b){ b.classList.toggle("on", b.dataset.cat === c); });
+  renderCatalog();
+};
+$("#prod-filter-loc").onchange = renderCatalog;
+$("#prod-q").oninput = renderCatalog;
+
+$$("#prod-chips button").forEach(function(btn){
+  btn.onclick = function(){
+    var c = btn.dataset.cat;
+    $$("#prod-chips button").forEach(function(b){ b.classList.remove("on"); });
+    btn.classList.add("on");
+    $("#prod-filter-cat").value = c;
+    renderCatalog();
+  };
+});
+
+// ==========================================
+// TECHNICAL SPECIFICATION VIEWER (DRAWER)
+// ==========================================
+function openProductSpecs(prodId){
+  var p = PRODUCTS.find(function(item){ return item.id === prodId; });
+  if(!p) return;
+
+  var opticalRows = Object.keys(p.optical).map(function(k){
+    return '<tr><th>' + k + '</th><td>' + p.optical[k] + '</td></tr>';
+  }).join('');
+
+  var physicalRows = Object.keys(p.physical).map(function(k){
+    return '<tr><th>' + k + '</th><td>' + p.physical[k] + '</td></tr>';
+  }).join('');
+
+  $("#drawer-content").innerHTML = [
+    '<span class="ey" style="margin-bottom:8px">Technical Specification Sheet</span>',
+    '<h2 style="font-size:clamp(28px,3.8vw,42px)">' + p.name + '</h2>',
+    '<div style="margin-top:8px"><span class="badge ac">' + p.code + '</span> <span class="badge">' + p.loc + ' Application</span> <span class="badge">' + p.thickness + '</span></div>',
+    '<p class="l" style="margin-top:16px">' + p.desc + '</p>',
+    
+    '<div class="metric-strip">',
+      '<div class="m-card"><span>TSER Heat Block</span><b>' + p.tser + '</b></div>',
+      '<div class="m-card"><span>Visible Light</span><b>' + p.vlt + '</b></div>',
+      '<div class="m-card"><span>UV Rejection</span><b>' + p.uvBlock + '</b></div>',
+      '<div class="m-card"><span>Glare Cut</span><b>' + p.glareRed + '</b></div>',
+    '</div>',
+
+    '<div style="margin-top:32px">',
+      '<h3>Solar &amp; Optical Properties (EN 410 / EN 673)</h3>',
+      '<table class="tb">' + opticalRows + '</table>',
+    '</div>',
+
+    '<div style="margin-top:32px">',
+      '<h3>Physical Characteristics &amp; Construction</h3>',
+      '<table class="tb">' + physicalRows + '</table>',
+    '</div>',
+
+    '<div style="margin-top:32px">',
+      '<h3>Compliance &amp; Warranty</h3>',
+      '<table class="tb">',
+        '<tr><th>Standard / Test</th><td>' + p.standard + '</td></tr>',
+        '<tr><th>Warranty</th><td>' + p.warranty + ' with roll registration</td></tr>',
+        '<tr><th>Glass Compatibility</th><td>Suitable for annealed, toughened, and double glazed units subject to Stockfilms thermal stress verification.</td></tr>',
+      '</table>',
+    '</div>',
+
+    '<div style="margin-top:36px;padding:22px;background:var(--sf);border:1px solid var(--st);border-radius:3px">',
+      '<span class="ey" style="margin-bottom:8px">NBS Specification Clause (CAWS Format)</span>',
+      '<textarea id="drawer-clause-text" style="width:100%;height:90px;font-family:monospace;font-size:13px;padding:12px;border:1px solid var(--st);border-radius:3px;background:var(--bg);color:var(--ink)" readonly>' + p.clause + '</textarea>',
+      '<div style="margin-top:12px;display:flex;gap:12px;align-items:center">',
+        '<button class="btn btn-sm" id="btn-copy-drawer-clause">Copy NBS Clause <i>📋</i></button>',
+        '<span id="drawer-copy-feedback" style="font-size:13px;color:var(--ac);display:none">Copied to clipboard!</span>',
+      '</div>',
+    '</div>',
+
+    '<div class="row" style="margin-top:36px">',
+      '<a class="btn" href="#enquire" data-v="enquire" onclick="closeProductSpecs()">Request A4 Sample Pack <i>→</i></a>',
+      '<a class="ln" href="#hub" data-v="hub" onclick="closeProductSpecs()">Download Full PDF Data Sheet <i>→</i></a>',
+    '</div>'
+  ].join('');
+
+  $("#btn-copy-drawer-clause").onclick = function(){
+    var txt = $("#drawer-clause-text").value;
+    if(navigator.clipboard && txt){
+      navigator.clipboard.writeText(txt).then(function(){
+        var fb = $("#drawer-copy-feedback");
+        fb.style.display = "inline";
+        setTimeout(function(){ fb.style.display = "none"; }, 1800);
+      });
+    }
+  };
+
+  $("#spec-drawer").classList.add("on");
+  document.body.style.overflow = "hidden";
+}
+
+function closeProductSpecs(){
+  $("#spec-drawer").classList.remove("on");
+  document.body.style.overflow = "";
+}
+
+$("#drawer-close-btn").onclick = closeProductSpecs;
+$("#spec-drawer").onclick = function(e){
+  if(e.target === $("#spec-drawer")) closeProductSpecs();
+};
+addEventListener("keydown", function(e){
+  if(e.key === "Escape") closeProductSpecs();
+});
+
+function copyClauseDirect(prodId, btn){
+  var p = PRODUCTS.find(function(item){ return item.id === prodId; });
+  if(p && navigator.clipboard){
+    navigator.clipboard.writeText(p.clause).then(function(){
+      var orig = btn.textContent;
+      btn.textContent = "Copied!";
+      setTimeout(function(){ btn.textContent = orig; }, 1600);
+    });
+  }
+}
+
+// HUB SEARCH
+$("#q").oninput=function(){
+  var v=this.value.toLowerCase();
+  $$("#dl a").forEach(function(a){
+    a.style.display=(a.dataset.t+a.textContent).toLowerCase().indexOf(v)>-1?"":"none";
+  });
+};
+
+// GLASS AREA CALCULATOR
+function calc(){
+  var w=parseFloat($("#cw").value)||0;
+  var h=parseFloat($("#ch").value)||0;
+  var n=parseInt($("#cn").value,10)||1;
+  var v=w*h*n;
+  $("#rs").textContent=(isFinite(v)?v:0).toFixed(2)+" m²";
+}
+$("#calc").onclick=calc;
+
+// ENQUIRY SUBMIT
+$("#ef").onsubmit=function(e){
+  e.preventDefault();
+  $("#ok").textContent="Thank you. Your project enquiry has been logged. An Opalux adviser will respond with the technical specification pack.";
+};
 </script>
 </body>
 </html>
